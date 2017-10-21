@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_weight="1.0"
+        android:layout_height="match_parent">
+    </View>
+
+    <com.beardedhen.androidbootstrap.BootstrapWell
+        android:layout_width="wrap_content"
+        android:layout_marginRight="10dp"
+        app:bootstrapSize="sm"
+        app:roundedCorners="true"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
+
+        <com.whut.JieShe.view.AutoSplitTextView
+            android:id="@+id/message_text"
+            android:layout_width="match_parent"
+            android:text="helloniahdkjhasdfkgdjshfgsjhdfgjshdfgjshdasfdfsdfsdf"
+            android:maxWidth="200dp"
+            style="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:layout_height="match_parent" />
+
+    </com.beardedhen.androidbootstrap.BootstrapWell>
+
+    <cn.carbs.android.avatarimageview.library.AvatarImageView
+        android:id="@+id/avatar"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/default_avatar" />
+</LinearLayout>

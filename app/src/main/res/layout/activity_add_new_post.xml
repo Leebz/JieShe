@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.whut.JieShe.AddNewPostActivity"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="10">
+
+        <EditText
+            android:id="@+id/post_title"
+            style="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="标题(18个字内)"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:textColor="#000000"
+            android:maxLength="18"
+            android:background="#ffffff"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#23202020"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"/>
+
+        <ScrollView
+            android:id="@+id/scroll_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <EditText
+                style="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:id="@+id/post_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:hint="输入MarkDown格式正文"
+                android:inputType="textMultiLine"
+                android:lineSpacingExtra="4dp"
+                android:textColor="#000000"
+                android:background="#ffffff"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                />
+        </ScrollView>
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="活动时间："/>
+            <TextView
+                android:id="@+id/text_post_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="null"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="活动地点："/>
+            <TextView
+                android:id="@+id/text_post_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="null"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="验证方式："/>
+            <TextView
+                android:id="@+id/text_need_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="null"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#23202020"
+        android:layout_marginBottom="5dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="0.5"
+        android:layout_marginBottom="5dp"
+        android:weightSum="6">
+
+        <ImageView
+            android:id="@+id/set_activity_time"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@android:drawable/ic_menu_recent_history" />
+
+        <ImageView
+            android:id="@+id/set_activity_address"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@android:drawable/ic_menu_myplaces" />
+
+        <ImageView
+            android:id="@+id/set_need_check"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@android:drawable/ic_menu_manage" />
+
+        <ImageView
+            android:id="@+id/clear_post"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@android:drawable/ic_menu_delete" />
+
+        <ImageView
+            android:id="@+id/get_markdown_help"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@android:drawable/ic_menu_info_details" />
+        <ImageView
+            android:id="@+id/submit_post_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@android:drawable/ic_menu_send" />
+
+
+    </LinearLayout>
+</LinearLayout>

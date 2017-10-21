@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.whut.JieShe.RequestManagerActivity">
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/request_info_list"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.tr4android.support.extension.widget.FloatingActionMenu
+        android:layout_width="wrap_content"
+        android:layout_height="154dp"
+        android:layout_gravity="end|bottom"
+        app:fabMenuCloseIconAngle="135"
+        app:fabMenuCloseIconSrc="@drawable/ic_add_black_24dp"
+        app:fabMenuLabelStyle="@style/label_style_dark">
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:layout_margin="20dp"
+            android:contentDescription="manager_tool"
+            app:srcCompat="@android:drawable/ic_input_add" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/btn_accept_all"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:contentDescription="全部通过"
+            app:backgroundTint="@color/bootstrap_brand_info"
+            app:srcCompat="@android:drawable/presence_online" />
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/btn_refuse_all"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:contentDescription="全部拒绝"
+            app:backgroundTint="@color/bootstrap_brand_info"
+            app:srcCompat="@android:drawable/presence_busy" />
+
+
+    </com.tr4android.support.extension.widget.FloatingActionMenu>
+
+
+</android.support.design.widget.CoordinatorLayout>

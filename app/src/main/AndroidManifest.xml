@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.whut.JieShe">
+
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:name="com.whut.JieShe.BmobIMApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="Bmob_APP_KEY"
+            android:value="4d51b1d2dc86a53500674ac2a4f73e1b" />
+        <activity android:name="com.whut.JieShe.WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.whut.JieShe.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name="com.whut.JieShe.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.whut.JieShe.RegisterActivity"
+            android:label="@string/title_activity_register" />
+
+        <receiver android:name="cn.bmob.newim.core.ConnectChangeReceiver">
+            <intent-filter>
+                <action android:name="cn.bmob.action.RECONNECT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="cn.bmob.newim.core.service.BmobIMService"
+            android:process=":bmobcore" />
+        <service
+            android:name="cn.bmob.newim.core.service.NotifyService"
+            android:process=":bmobcore" />
+        <service android:name="cn.bmob.newim.core.service.ReConnectService" />
+        <service android:name="cn.bmob.newim.core.service.HeartBeatService" />
+
+        <activity
+            android:name="com.whut.JieShe.ChatActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="com.whut.JieShe.PostDetailActivity"
+            android:label="@string/title_activity_post_detail"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.whut.JieShe.UserDetailInfoActivity"
+            android:label="@string/title_activity_user_detail_info"
+            android:theme="@style/AppTheme.TranslucentStatus" />
+        <activity
+            android:name="com.whut.JieShe.SystemConfigActivity"
+            android:label="系统设置" />
+        <activity android:name="com.whut.JieShe.MyDynamicsActivity" />
+        <activity android:name="com.whut.JieShe.AboutUsActivity" />
+        <activity android:name="com.whut.JieShe.CheckUpdateActivity" />
+        <activity
+            android:name="com.whut.JieShe.OrganizationDetailActivity"
+            android:theme="@style/AppTheme.TranslucentStatus" />
+        <activity android:name="com.whut.JieShe.ChangePswActivity" />
+        <activity android:name="com.whut.JieShe.ChangeEmailActivity" />
+        <activity android:name="com.whut.JieShe.AdminActivity"
+            android:theme="@style/AppTheme.TranslucentStatus"/>
+        <activity
+            android:name="com.whut.JieShe.MyActivityActivity"
+            android:theme="@style/AppTheme.NullContentOverlay" />
+        <activity
+            android:name="com.whut.JieShe.MyCollectionActivity"
+            android:theme="@style/AppTheme.NullContentOverlay" />
+        <activity android:name="com.whut.JieShe.GroupActivity" />
+        <activity android:name="com.whut.JieShe.AddNewPostActivity" />
+        <activity android:name="com.whut.JieShe.GroupInformationActivity"
+            android:theme="@style/AppTheme.TranslucentStatus" />
+        
+        <activity android:name="com.soundcloud.android.crop.CropImageActivity" />
+        <activity android:name="com.whut.JieShe.RequestManagerActivity" />
+        <activity android:name="com.whut.JieShe.ShowJoinedUsersActivity"/>
+        <activity
+            android:name="com.whut.JieShe.SearchActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.whut.JieShe.GuidePageActivity"/>
+    </application>
+
+</manifest>

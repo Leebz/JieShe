@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <group android:enabled="true">
+        <item
+            android:id="@+id/write_comment"
+            android:icon="@drawable/ic_edit_black_24dp"
+            android:title="写评论"
+            />
+        <item
+            android:id="@+id/collect"
+            android:icon="@drawable/ic_favorite_red_24dp"
+            android:title="收藏/取消收藏"/>
+        <item
+            android:id="@+id/advisory"
+            android:icon="@drawable/ic_message_black_24dp"
+            android:title="咨询"
+            />
+    </group>
+
+    <group android:id="@+id/group"
+        android:enabled="true">
+        <item
+            android:icon="@drawable/ic_report_black_24dp"
+            android:id="@+id/report"
+            android:title="举报" />
+    </group>
+</menu>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_organization_detail">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.hymane.expandtextview.ExpandTextView
+            android:id="@+id/organization_introduce"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            style="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:textColor="@android:color/black"
+            app:expandHint="更多"
+            app:foldHint="收回"
+            app:titleText="简介:"
+            app:titleTextSize="16sp"
+            app:contentTextSize="15sp"
+            app:textContentColor="?android:attr/textColorPrimary"
+            app:textHintColor="?android:attr/textColorPrimary"
+            app:textTitleColor="?android:attr/textColorSecondary"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/organization_tag_container"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp" />
+
+        <com.beardedhen.androidbootstrap.BootstrapLabel
+            android:id="@+id/organization_manager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NULL"
+            android:textColor="@android:color/holo_blue_bright"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="8dp"
+            app:bootstrapBrand="info"
+            app:bootstrapHeading="h6"
+            app:roundedCorners="false"
+            app:layout_constraintTop_toBottomOf="@+id/organization_introduce"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="管理员:"
+            app:layout_constraintRight_toLeftOf="@+id/organization_manager"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBaseline_toBaselineOf="@id/organization_manager"
+            android:layout_marginEnd="8dp"
+            android:id="@+id/textView5" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/organization_tag_container"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp"
+            app:layout_constraintHorizontal_bias="0.0">
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/recent_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="最近活动:"
+            style="@android:style/TextAppearance.DeviceDefault.Small"
+            app:layout_constraintTop_toBottomOf="@+id/organization_manager"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginStart="8dp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/post_list"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recent_activity" />
+
+        <TextView
+            android:id="@+id/organization_hot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="活动参与:"
+            app:layout_constraintBaseline_toBaselineOf="@id/organization_manager"
+            tools:layout_editor_absoluteY="165dp"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginRight="8dp" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v4.widget.NestedScrollView>

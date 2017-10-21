@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.whut.JieShe.fragments.MainColumnFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginBottom="5dp"
+        android:layout_height="wrap_content">
+
+        <com.beardedhen.androidbootstrap.BootstrapDropDown
+            android:id="@+id/sort_drop_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bootstrapText="排序 {fa_thumbs_o_up}"
+            app:bootstrapBrand="success"
+            android:layout_weight="1.0"
+            app:roundedCorners="false"
+            app:bootstrapSize="lg"
+            android:textColor="@android:color/white"
+            app:dropdownResource="@array/dropdown_organization_sort_data"
+            app:bootstrapExpandDirection="down"/>
+
+        <com.beardedhen.androidbootstrap.BootstrapDropDown
+            android:id="@+id/type_drop_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            app:bootstrapText="类型 {fa_thumbs_o_up}"
+            app:bootstrapBrand="info"
+            android:textColor="@android:color/white"
+            app:roundedCorners="false"
+            app:bootstrapSize="lg"
+            app:dropdownResource="@array/dropdown_organization_type_data"
+            app:bootstrapExpandDirection="down"/>
+    </LinearLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:id="@+id/swipe_refresh"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/organization_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+
+</LinearLayout>

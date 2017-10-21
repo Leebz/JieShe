@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".PostDetailActivity"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/loading_container"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/loading_post_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/AVLoadingIndicatorView.Large"
+            app:indicatorName="BallPulseIndicator"
+            app:indicatorColor="@android:color/holo_blue_bright"/>
+    </LinearLayout>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0"
+        android:fitsSystemWindows="true" >
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                app:titleTextColor="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_scrollFlags="scroll|enterAlways"
+                android:minHeight="?attr/actionBarSize" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:background="@android:color/white"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/post_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    style="@android:style/TextAppearance.DeviceDefault.Large"
+                    android:text="Bootstrap Label" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="活动时间:"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/activity_date"
+                        android:text="xx:xx"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="活动地点:"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/activity_address"
+                        android:text="xxxx"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/come_from_organization"
+                    android:layout_width="wrap_content"
+                    android:text="来自:"
+                    style="@android:style/TextAppearance.DeviceDefault.Small"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="right"
+                    android:layout_height="wrap_content" />
+
+                <com.mukesh.MarkdownView
+                    android:id="@+id/post_detail_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:gravity="right|center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/num_of_joined"
+                        android:layout_width="wrap_content"
+                        android:text="已有xxx人报名"
+                        android:textColor="#ffffff"
+                        android:background="#0000ff"
+                        android:layout_height="wrap_content" />
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="match_parent"/>
+
+                    <com.beardedhen.androidbootstrap.BootstrapLabel
+                        android:id="@+id/author"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textColor="@android:color/holo_blue_bright"
+                        android:layout_marginRight="8dp"
+                        app:bootstrapBrand="info"
+                        app:bootstrapHeading="h6"
+                        app:roundedCorners="false"
+                        android:layout_marginEnd="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text=" 创建于 "
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/create_time"
+                        android:text="XX:XX"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/post_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+    </android.support.design.widget.CoordinatorLayout>
+    <include
+        android:id="@+id/post_detail_layout_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        layout="@layout/post_detail_layout_bottom_bar"/>
+
+</LinearLayout>

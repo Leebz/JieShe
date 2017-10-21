@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="com.whut.JieShe.SystemConfigActivity">
+
+    <TextView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
+        android:id="@+id/base_info_setting"
+        android:layout_height="wrap_content"
+        android:text="@string/basic_info"
+        android:textColor="@color/colorPrimary" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/change_psd_bar"
+            android:layout_width="0dp"
+            android:background="@drawable/main_menu_item_background"
+            app:layout_constraintTop_toBottomOf="@+id/base_info_setting"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/change_psd_text"
+                style="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:textColor="@android:color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/change_password"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.beardedhen.androidbootstrap.AwesomeTextView
+                style="@android:style/TextAppearance.DeviceDefault.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:bootstrapBrand="success"
+                app:bootstrapText="{fa_angle_right}"
+                app:fontAwesomeIcon="fa_android"
+                android:layout_marginRight="10dp"
+                app:typicon="ty_anchor"
+                app:layout_constraintRight_toLeftOf="parent"
+                app:layout_constraintBaseline_toBaselineOf="@+id/change_psd_text"
+                android:layout_marginEnd="10dp" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="#23202020"
+                android:layout_marginTop="15dp"
+                app:layout_constraintLeft_toLeftOf="@+id/change_psd_text"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/change_psd_text"/>
+        </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/change_email_bar"
+        android:layout_width="0dp"
+        android:background="@drawable/main_menu_item_background"
+        app:layout_constraintTop_toBottomOf="@+id/change_psd_bar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/change_email_text"
+            style="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:textColor="@android:color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@string/change_email"/>
+
+        <com.beardedhen.androidbootstrap.AwesomeTextView
+            style="@android:style/TextAppearance.DeviceDefault.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@+id/change_email_text"
+            android:layout_marginEnd="10dp"
+            app:bootstrapBrand="success"
+            app:bootstrapText="{fa_angle_right}"
+            app:fontAwesomeIcon="fa_android"
+            app:typicon="ty_anchor" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#23202020"
+            android:layout_marginTop="15dp"
+            app:layout_constraintLeft_toLeftOf="@+id/change_email_text"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/change_email_text"/>
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
+        android:id="@+id/other_setting"
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/change_email_bar"
+        app:layout_constraintLeft_toLeftOf="@id/change_email_bar"
+        android:layout_height="wrap_content"
+        android:text="@string/other_info"
+        android:textColor="@color/colorPrimary" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:background="@drawable/main_menu_item_background"
+        android:id="@+id/clear_cache_bar"
+        app:layout_constraintTop_toBottomOf="@+id/other_setting"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/clear_cache_text"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:textColor="@android:color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clear_cache" />
+        <com.beardedhen.androidbootstrap.AwesomeTextView
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@+id/clear_cache_text"
+            android:layout_marginEnd="10dp"
+            style="@android:style/TextAppearance.DeviceDefault.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bootstrapBrand="success"
+            app:bootstrapText="{fa_angle_right}"
+            app:fontAwesomeIcon="fa_android"
+            app:typicon="ty_anchor"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#23202020"
+            android:layout_marginTop="15dp"
+            app:layout_constraintLeft_toLeftOf="@+id/clear_cache_text"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clear_cache_text"/>
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/check_update_bar"
+        android:layout_width="0dp"
+        android:background="@drawable/main_menu_item_background"
+        app:layout_constraintTop_toBottomOf="@+id/clear_cache_bar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/check_update_text"
+            style="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:textColor="@android:color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/check_update" />
+
+        <com.beardedhen.androidbootstrap.AwesomeTextView
+            style="@android:style/TextAppearance.DeviceDefault.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:bootstrapBrand="success"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@+id/check_update_text"
+            android:layout_marginEnd="10dp"
+            app:bootstrapText="{fa_angle_right}"
+            app:fontAwesomeIcon="fa_android"
+            app:typicon="ty_anchor" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#23202020"
+            android:layout_marginTop="15dp"
+            app:layout_constraintLeft_toLeftOf="@+id/check_update_text"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/check_update_text"/>
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:background="@drawable/main_menu_item_background"
+        android:id="@+id/about_us_bar"
+        app:layout_constraintTop_toBottomOf="@+id/check_update_bar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/about_us_text"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:textColor="@android:color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/about_us" />
+
+        <com.beardedhen.androidbootstrap.AwesomeTextView
+            style="@android:style/TextAppearance.DeviceDefault.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@+id/about_us_text"
+            android:layout_marginEnd="10dp"
+            app:bootstrapBrand="success"
+            app:bootstrapText="{fa_angle_right}"
+            app:fontAwesomeIcon="fa_android"
+            app:typicon="ty_anchor" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#23202020"
+            android:layout_marginTop="15dp"
+            app:layout_constraintLeft_toLeftOf="@+id/about_us_text"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/about_us_text"/>
+    </android.support.constraint.ConstraintLayout>
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:id="@+id/exit_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="退出登陆"
+        app:bootstrapBrand="success"
+        app:bootstrapSize="lg"
+        app:buttonMode="regular"
+        app:roundedCorners="true"
+        app:showOutline="false"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

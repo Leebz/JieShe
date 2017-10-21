@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="dropdown_organization_sort_data" >
+        <item>热度</item>
+        <item>活动时间</item>
+    </string-array>
+
+    <string-array name="dropdown_organization_type_data" >
+        <item>全部</item>
+        <item>读书</item>
+        <item>户外活动</item>
+        <item>体育健身</item>
+        <item>电子竞技</item>
+        <item>其他</item>
+    </string-array>
+
+</resources>

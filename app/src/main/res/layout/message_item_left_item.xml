@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <cn.carbs.android.avatarimageview.library.AvatarImageView
+        android:id="@+id/avatar"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/default_avatar" />
+
+    <com.beardedhen.androidbootstrap.BootstrapWell
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="10dp"
+        app:bootstrapSize="sm"
+        android:layout_marginTop="10dp"
+        app:roundedCorners="true"
+        android:layout_height="wrap_content">
+
+        <com.whut.JieShe.view.AutoSplitTextView
+            android:id="@+id/message_text"
+            android:layout_width="match_parent"
+            android:maxWidth="200dp"
+            android:text="hello"
+            style="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:layout_height="match_parent" />
+
+    </com.beardedhen.androidbootstrap.BootstrapWell>
+</LinearLayout>
